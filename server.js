@@ -28,6 +28,7 @@ if (process.env.NODE_ENV === "production") {
 }
 
 app.get("/", (req, res) => {
+  res.setHeader("Access-Control-Allow-Credentials","true");
   res.send("Welcome to eShop website.");
 });
 
